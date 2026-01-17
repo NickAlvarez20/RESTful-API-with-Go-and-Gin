@@ -23,21 +23,20 @@ var albums = []album{
 	{ID: "3", Title: "Sarah Vaughan and Clifford Brown", Artist: "Sarah Vaughan", Price: 39.99},
 }
 
-
 // Write a handler to return all times
 
 // getAlbums response with the list of all albums as JSON.
-func getAlbums(c *gin.Context){
+func getAlbums(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, albums)
 }
 
 // postAlbums adds an album from JSON received in the request body.
-func postAlbums(c *gin.Context){
+func postAlbums(c *gin.Context) {
 	var newAlbum album // declare variable (name) type | creates new object(album) to add to response
 
 	// Call BindJSON to bind the received JSON to
 	// newAlbum.
-	if err := c.BindJSON(&newAlbum); err != nil{
+	if err := c.BindJSON(&newAlbum); err != nil {
 		return
 	}
 
@@ -46,11 +45,30 @@ func postAlbums(c *gin.Context){
 	c.IndentedJSON(http.StatusCreated, newAlbum)
 }
 
-func main(){
+// getAlbumByID locates the album whose ID value matches the id
+// parameter sent by the client, then returns that album as a response.
+
+// Write a handler to return a specific item
+func getAlbumByID(c *gin.Context) {
+	id := c.Param("id")
+
+	// loop through the range of albums
+	// looking for an album whose ID value matches the parameter
+	for _, a := range albums {
+		if a.ID == id {
+			c.IndentedJSON(http.StatusOK, a)
+			return
+		}
+	}
+	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "album not found"})
+
+}
+
+func main() {
 	router := gin.Default()
 	router.GET("/albums", getAlbums)
 	router.POST("/albums", postAlbums)
+	router.GET("albums/:id", getAlbumByID)
 
 	router.Run("localhost:8080")
 }
-
