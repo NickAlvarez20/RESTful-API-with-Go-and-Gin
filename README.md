@@ -19,7 +19,8 @@ Go's RESTful API Tutorial
 RESTful API with Go and Gin
 
 ## About
-This is a simple, beginner-friendly RESTful API built with **Go** and the **Gin** web framework.  
+This is a simple, beginner-friendly RESTful API built with **Go** and the **Gin** web framework.
+This was designed and built following the RESTful API tutorial provided by the official Go Website: https://go.dev/doc/tutorial/web-service-gin
 It serves as a practical tutorial project to learn how to create HTTP endpoints, handle requests/responses, and structure a basic API in Go.  
 
 The implementation is minimal (single `main.go` file), most likely implementing standard CRUD operations (e.g. albums, books, or items) — a common pattern in the official Gin + Go tutorial.
