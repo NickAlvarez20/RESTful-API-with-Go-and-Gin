@@ -64,8 +64,14 @@ You can then test the API endpoints using tools like:
 Example endpoints (typical for this kind of tutorial — verify in code):
 
 *GET /albums — list all items
+
+
 *GET /albums/:id — get one item
+
+
 *POST /albums — create new item
+
+
 *DELETE /albums/:id — remove item
 
 
