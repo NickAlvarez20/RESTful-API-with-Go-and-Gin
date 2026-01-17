@@ -1,5 +1,11 @@
 package main
 
+import (
+	"net/http"
+
+	"github.com/gin-gonic/gin"
+)
+
 // Create structs for api
 
 // album represents data about a record album.
@@ -18,5 +24,17 @@ var albums = []album{
 }
 
 
+// Write a handler to return all times
 
+// getAlbums respons with the list of all albums as JSON.
+func getAlbums(c *gin.Context){
+	c.IndentedJSON(http.StatusOK, albums)
+}
+
+func main(){
+	router := gin.Default()
+	router.GET("/albums", getAlbums)
+
+	router.Run("localhost:8080")
+}
 
