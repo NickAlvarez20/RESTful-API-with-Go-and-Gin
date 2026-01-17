@@ -77,11 +77,21 @@ Example endpoints (typical for this kind of tutorial — verify in code):
 
 ## Learning Outcomes
 This project helped me:
-*Understand how to create a web server in Go using Gin
-*Learn routing, middleware, and request/response handling in Gin 
-*Practice JSON marshalling/unmarshalling and HTTP status codes
-*Get familiar with Go modules and dependency management
-*Build a complete (though simple) REST API from scratch
+
+
+* Understand how to create a web server in Go using Gin
+
+
+* Learn routing, middleware, and request/response handling in Gin 
+
+
+* Practice JSON marshalling/unmarshalling and HTTP status codes
+
+
+* Get familiar with Go modules and dependency management
+
+
+* Build a complete (though simple) REST API from scratch
  
 ## Contributing
 This is primarily a personal learning / portfolio repository, so formal contributions aren’t required. However, if you spot bugs, have project ideas, or want to add improvements (e.g. add database support, authentication, more endpoints), feel free to:
