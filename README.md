@@ -56,23 +56,23 @@ The server will typically start on http://localhost:8080 (check main.go for the 
 
 You can then test the API endpoints using tools like:
 
-*curl
-*Postman
-*Insomnia
-*Browser (for GET requests)
+* curl
+* Postman
+* Insomnia
+* Browser (for GET requests)
 
 Example endpoints (typical for this kind of tutorial — verify in code):
 
-*GET /albums — list all items
+* GET /albums — list all items
 
 
-*GET /albums/:id — get one item
+* GET /albums/:id — get one item
 
 
-*POST /albums — create new item
+* POST /albums — create new item
 
 
-*DELETE /albums/:id — remove item
+* DELETE /albums/:id — remove item
 
 
 ## Learning Outcomes
@@ -103,7 +103,11 @@ This repository is open and free for educational use.
 * (If you decide on a specific license later, insert it here — e.g. MIT, Apache 2.0, etc.)*
 ## Credits & Acknowledgements
 This project was created by NickAlvarez20 as part of my journey to learn Go programming and web development with Gin.
-**Special thanks to the official Go documentation and Gin framework team.
-*Check out my other repositories to see more of my work!
+
+
+** Special thanks to the official Go documentation and Gin framework team.
+
+
+* Check out my other repositories to see more of my work!
 ## Contact
 You can find more of my work at [NickAlvarez20 on GitHub](https://github.com/NickAlvarez20).
